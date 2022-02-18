@@ -4,6 +4,7 @@
         <meta charset="utf-8" />
         <title>Assignment 1 Example | COMP1073 Client-Side Scripting</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Marcello Nunes Bernardes">
         <script src="./js/random_sentence.js.js" defer></script>
     </head>
     <body>
@@ -11,15 +12,15 @@
         <section id="buildSentence">
             <!-- Set up a button for each part of the sentence, and an empty paragraph to output the currenly chosen word -->
             <h2>Build your sentence</h2>
-            <button id="noun1">Choose Noun 1</button>
-            <p id="selectedNoun1">The turkey</p>
-            <button id="verb">Choose Verb</button>
+            <button id="noun1" onClick="selectWord(this.id)">Choose Noun 1</button>
+            <p id="selectedNoun1" onClick="selectWord(this.id)">The turkey</p>
+            <button id="verb" onClick="selectWord(this.id)">Choose Verb</button>
             <p id="selectedVerb">sat on</p>
-            <button id="adjective">Choose Adjective</button>
-            <p id="selectedAdjective">a funny</p>
-            <button id="noun2">Choose Noun 2</button>
+            <button id="adjective" onClick="selectWord(this.id)">Choose Adjective</button>
+            <p id="selectedAdjective" onClick="selectWord(this.id)">a funny</p>
+            <button id="noun2" onClick="selectWord(this.id)">Choose Noun 2</button>
             <p id="selectedNoun2">goat</p>
-            <button id="setting">Choose Setting</button>
+            <button id="setting" onClick="selectWord(this.id)">Choose Setting</button>
             <p id="selectedSetting">on the moon</p>
         </section>
         <section id="showSentence">

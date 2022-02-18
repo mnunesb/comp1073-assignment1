@@ -22,23 +22,23 @@ let setting = ["on the moon", "on the chair", "in my spaghetti", "in my soup", "
 
 /* Functions
 -------------------------------------------------- */
-function selectWord (button) {
-    var x = button.id;
+function selectWord (id) {
+    var x = id;
     switch (x) {
         case 'noun1':
-            myFunction1(x);
+            console.log('swith is working');
             break;
         case 'verb':
-            myFunction2(x);
+            console.log('swith is working');
             break;
         case 'adjective':
-            myFunction3(x);
+            console.log('swith is working');
             break;
             case 'noun2':
-                myFunction2(x);
+                console.log('swith is working');
                 break;
             case 'setting':
-                myFunction3(x);
+                console.log('swith is working');
                 break
         default:
             return false;
@@ -75,9 +75,5 @@ function createStory() {
 
 /* Event handlers
 -------------------------------------------------- */
-button1.addEventListener('click',createStory);
-button2.addEventListener('click',createStory);
-button3.addEventListener('click',createStory);
-button4.addEventListener('click',createStory);
-button5.addEventListener('click',createStory);
+
 // Buttons to pick words/phrases
