@@ -7,9 +7,19 @@ var button2 = document.getElementById('verb');
 var button3 = document.getElementById('adjective');
 var button4 = document.getElementById('noun2');
 var button5 = document.getElementById('setting');
+var btn1Indx = 0;
+var btn2Indx = 0;
+var btn3Indx = 0;
+var btn4Indx = 0;
+var btn5Indx = 0;
 
+let phrase =[];
 // Paragraphs for output
-
+var noun1P = document.getElementById('selectedNoun1');
+var verbP = document.getElementById('selectedVerb');
+var adjectiveP = document.getElementById('selectedAdjective');
+var noun2P = document.getElementById('selectedNoun2');
+var settingP = document.getElementById('selectedSetting');
 
 // Word lists
 let noun1 =["The turkey", "Mom", "Dad", "The dog", "My teacher", "The elephant", "The cat"];
@@ -23,22 +33,42 @@ let setting = ["on the moon", "on the chair", "in my spaghetti", "in my soup", "
 /* Functions
 -------------------------------------------------- */
 function selectWord (id) {
-    var x = id;
-    switch (x) {
+    var buttonId = id;
+    switch (buttonId) {
         case 'noun1':
-            console.log('swith is working');
+            if(btn1Indx > noun1.length-1){
+                btn1Indx = 0;
+            }
+            noun1P.textContent = noun1[btn1Indx];
+            btn1Indx++;
             break;
         case 'verb':
-            console.log('swith is working');
+            if(btn2Indx > verb.length-1){
+                btn2Indx = 0;
+            }
+            verbP.textContent = verb[btn2Indx];
+            btn2Indx++;
             break;
         case 'adjective':
-            console.log('swith is working');
+            if(btn3Indx > adjective.length-1){
+                btn3Indx = 0;
+            }
+            adjectiveP.textContent = adjective[btn3Indx];
+            btn3Indx++;
             break;
             case 'noun2':
-                console.log('swith is working');
+                if(btn4Indx > noun2.length-1){
+                    btn4Indx = 0;
+                }
+                noun2P.textContent = noun2[btn4Indx];
+                btn4Indx++;
                 break;
             case 'setting':
-                console.log('swith is working');
+                if(btn5Indx > setting.length-1){
+                    btn5Indx = 0;
+                }
+                settingP.textContent = setting[btn5Indx];
+                btn5Indx++;
                 break
         default:
             return false;
