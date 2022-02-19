@@ -23,6 +23,7 @@ var settingP = document.getElementById('selectedSetting');
 let manualPhrase = document.getElementById('viewSentence');
 let display = document.getElementById('yourPhrase');
 let randomPhrase = document.getElementById('randomSentence');
+let resetText = document.getElementById('resetBtn');
 
 // Word lists
 let noun1 =["The turkey", "Mom", "Dad", "The dog", "My teacher", "The elephant", "The cat"];
@@ -88,33 +89,20 @@ function randomStory() {
     yourPhrase =[noun1[Math.floor(Math.random() * noun1.length)],verb[Math.floor(Math.random() * verb.length)], adjective[Math.floor(Math.random() * adjective.length)], noun2[Math.floor(Math.random() * noun2.length)], setting[Math.floor(Math.random() * setting.length)]];
     display.textContent = yourPhrase.join(' ');
 }
-// Set the noun
 
-
-// Set the verb
-
-
-// Set the adjective
-
-
-// Set the second noun
-
-
-// Set the setting for the story
-
-
-// Output the completed sentence to the display paragraph
-
-
-// Output the completed random sentence to the display paragraph
-
-
-// Random number function for 'Surprise Me' button
-
+function resetPhrase (){
+    noun1P.textContent ='';
+    verbP.textContent ='';
+    adjectiveP.textContent ='';
+    noun2P.textContent ='';
+    settingP.textContent ='';
+    display.textContent = '';
+}
 
 
 /* Event handlers
 -------------------------------------------------- */
 manualPhrase.addEventListener('click', createStory);
 randomPhrase.addEventListener('click',randomStory);
-// Buttons to pick words/phrases
+resetText.addEventListener('click',resetPhrase);
+
