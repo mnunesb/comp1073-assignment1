@@ -5,13 +5,16 @@
         <title>Assignment 1 Example | COMP1073 Client-Side Scripting</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="author" content="Marcello Nunes Bernardes">
+        <!--Adding JS file-->
         <script src="./js/random_sentence.js.js" defer></script>
+        <!--Adding CSS file-->
+        <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
         <h1>Story Maker</h1>
         <section id="buildSentence">
             <!-- Set up a button for each part of the sentence, and an empty paragraph to output the currenly chosen word -->
-            <h2>Build your sentence</h2>
+            <h2>Build your sentence:</h2>
             <button id="noun1" onClick="selectWord(this.id)">Choose Noun 1</button>
             <p id="selectedNoun1" onClick="selectWord(this.id)"></p>
             <button id="verb" onClick="selectWord(this.id)">Choose Verb</button>
