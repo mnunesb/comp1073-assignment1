@@ -13,13 +13,16 @@ var btn3Indx = 0;
 var btn4Indx = 0;
 var btn5Indx = 0;
 
-let phrase =[];
+
 // Paragraphs for output
 var noun1P = document.getElementById('selectedNoun1');
 var verbP = document.getElementById('selectedVerb');
 var adjectiveP = document.getElementById('selectedAdjective');
 var noun2P = document.getElementById('selectedNoun2');
 var settingP = document.getElementById('selectedSetting');
+let manualPhrase = document.getElementById('viewSentence');
+let display = document.getElementById('yourPhrase');
+let randomPhrase = document.getElementById('randomSentence');
 
 // Word lists
 let noun1 =["The turkey", "Mom", "Dad", "The dog", "My teacher", "The elephant", "The cat"];
@@ -76,7 +79,14 @@ function selectWord (id) {
 }
 
 function createStory() {
-    console.log('it is working');
+    yourPhrase =[noun1[btn1Indx-1],verb[btn2Indx-1], adjective[btn3Indx-1], noun2[btn4Indx-1], setting[btn5Indx-1]];
+    display.textContent = yourPhrase.join(' ');
+}
+
+function randomStory() {
+
+    yourPhrase =[noun1[Math.floor(Math.random() * noun1.length)],verb[Math.floor(Math.random() * verb.length)], adjective[Math.floor(Math.random() * adjective.length)], noun2[Math.floor(Math.random() * noun2.length)], setting[Math.floor(Math.random() * setting.length)]];
+    display.textContent = yourPhrase.join(' ');
 }
 // Set the noun
 
@@ -105,5 +115,6 @@ function createStory() {
 
 /* Event handlers
 -------------------------------------------------- */
-
+manualPhrase.addEventListener('click', createStory);
+randomPhrase.addEventListener('click',randomStory);
 // Buttons to pick words/phrases
